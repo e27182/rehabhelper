@@ -1,0 +1,53 @@
+<div class="col-md-4">
+    <table class="table">
+        <thead>
+            <th></th>
+            <th>Actual Score</th>
+            <th>STD Dev.</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Overall:</th>
+                <td>{{ Statistics.Overall.Score | number:'.1-1' }}</td>
+                <td>{{ Statistics.Overall.StdDev | number:'.1-2' }}</td>
+            </tr>
+            <tr>
+                <th>Anterior/Posterior Index:</th>
+                <td>{{ Statistics.APIndex.Score | number:'.1-1' }}</td>
+                <td>{{ Statistics.APIndex.StdDev | number:'.1-2' }}</td>
+            </tr>
+            <tr>
+                <th>Medial/Lateral Index:</th>
+                <td>{{ Statistics.MLIndex.Score | number:'.1-1' }}</td>
+                <td>{{ Statistics.MLIndex.StdDev | number:'.1-2' }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <th>% Time in Zone:</th>
+                <th>A</th>
+                <td>{{ Statistics.TimeInZone.A | percent:'.0-0' }}</td>
+                <th>B</th>
+                <td>{{ Statistics.TimeInZone.B | percent:'.0-0' }}</td>
+                <th>C</th>
+                <td>{{ Statistics.TimeInZone.C | percent:'.0-0' }}</td>
+                <th>D</th>
+                <td>{{ Statistics.TimeInZone.D | percent:'.0-0' }}</td>
+            </tr>
+            <tr>
+                <th>% Time in Quadrant:</th>
+                <th>I</th>
+                <td>{{ Statistics.TimeInQuadrant.I | percent:'.0-0' }}</td>
+                <th>II</th>
+                <td>{{ Statistics.TimeInQuadrant.II | percent:'.0-0' }}</td>
+                <th>III</th>
+                <td>{{ Statistics.TimeInQuadrant.III | percent:'.0-0' }}</td>
+                <th>IV</th>
+                <td>{{ Statistics.TimeInQuadrant.IV | percent:'.0-0' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
